@@ -11,12 +11,6 @@ const users = [
   { username: "charlie", age: 28, email: "charlie@example.com" },
 ];
 
-app.get("/", (req, res) => {
-  return res
-    .status(400)
-    .json({ message: "User parameter cannot be empty", success: false });
-});
-
 app.get("/", async (req, res) => {
   try {
     const { email } = req.query;
